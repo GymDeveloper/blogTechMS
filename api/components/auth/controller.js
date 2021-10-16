@@ -14,6 +14,9 @@ export const login = async (req, res) => {
     password: user.password,
   };
 
+  // * aca se debe hacer un request a POST: localhsot:500/auth/sign
+  // * deviolver el token
+  // * recuerden que deben pasarle payload por el body de post
   const token = sign(payload);
 
   //? primer debo buscar a mi usario

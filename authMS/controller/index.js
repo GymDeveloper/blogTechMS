@@ -7,7 +7,9 @@ import { response } from "../../network";
  * el parametero
  */
 const sign = (req, res) => {
-  const signed = jwt.sign(req.body, secret);
+  const { payload } = req.body;
+
+  const signed = jwt.sign(payload, secret);
   return response({
     res,
     data: signed,
